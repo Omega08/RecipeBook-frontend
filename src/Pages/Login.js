@@ -57,7 +57,6 @@ const Login = () => {
         },
       });
 
-      console.log(response.data.getUserByLogin);
       const loggedUser = response.data.getUserByLogin;
       // User logged in successfully
       updateUser(loggedUser);
