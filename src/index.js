@@ -9,7 +9,7 @@ import { UserProvider } from "./providers/UserProvider";
 import { HelmetProvider } from "react-helmet-async";
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000/graphql", // Replace with your GraphQL endpoint
+  uri: `${process.env.REACT_APP_SERVER_URI}/graphql`, // Replace with your GraphQL endpoint
   cache: new InMemoryCache(),
 });
 

@@ -169,7 +169,7 @@ const PostBlog = () => {
   const uploadImageToImgBB = async (base64Image) => {
     try {
       const imgbbResponse = await axios.post(
-        `${process.env.APP_URI}/upload-to-imgbb`,
+        `${process.env.REACT_APP_SERVER_URI}/upload-to-imgbb`,
         {
           image: base64Image,
         }

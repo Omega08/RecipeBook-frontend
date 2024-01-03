@@ -22,7 +22,7 @@ const SearchRecipes = () => {
     const fetchRecipes = async () => {
       try {
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?query=${searchTerm}&apiKey=7ec6b98fed174605a8afbb215bc1b943&addRecipeInformation=true`
+          `https://api.spoonacular.com/recipes/complexSearch?query=${searchTerm}&apiKey=${process.env.REACT_APP_SPOONACULAR_KEY}&addRecipeInformation=true`
         );
         const data = await response.json();
         data.results.forEach((result) => {

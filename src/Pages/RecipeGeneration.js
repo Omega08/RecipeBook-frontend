@@ -51,7 +51,7 @@ const RecipeGeneration = () => {
       setLoading(true);
 
       const response = await axios.post(
-        `${process.env.APP_URI}/generate-recipe`,
+        `${process.env.REACT_APP_SERVER_URI}/generate-recipe`,
         {
           inputs: `The list of ingredients and the recipe with the following ingredients: ${formatList(
             ingredients
